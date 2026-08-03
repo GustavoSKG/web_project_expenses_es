@@ -2,7 +2,7 @@
 let budgetValue = 0;
 let totalExpensesValue = 0;
 
- let expensesEntries = [
+let expenseEntries = [
     ["groceries", 33 ],
     ["restaurants", 50 ],
     ["transport", 12 ],
