@@ -1,6 +1,5 @@
 
 let budgetValue = 0;
-let averageExpenses = 0;
 let totalExpensesValue = 0;
 
 let expenseEntries = [
@@ -31,12 +30,15 @@ function calculateAverageExpense(){
     
 
 function calculateBalance(){
+    
+    let balance = 0;
     totalExpensesValue = 0;
     for(let i = 0; i < expenseEntries.length; i++  ){
     totalExpensesValue +=  expenseEntries[i][1];
-    console.log(`Valor total de los gastos: ${totalExpensesValue}`);
     }
-    return budgetValue - totalExpensesValue;
+    balance =  budgetValue - totalExpensesValue;
+
+    return balance;
 }
 
 
@@ -69,7 +71,7 @@ function calculateCategoryExpenses(category){
 
 function calculateLargestCategory(){
 
-    let categories = [groceries, restaurants, transport, home, subscriptions];
+    let categories = ["groceries", "restaurants", "transport", "home", "subscriptions"];
     let categoriesData = [];
 
     for(let category of categories) {
@@ -85,6 +87,15 @@ function calculateLargestCategory(){
             largestAmount = categoriesData[i][1];
             largestCategory = categoriesData[i][0];
         }
+        
     }
-    return [largestCategory, largestAmount];
+    return largestCategory;
 }
+
+function addExpenseEntry(values){
+
+    expenseEntries.push(values);
+    totalExpensesValue += values[1];
+
+}
+
