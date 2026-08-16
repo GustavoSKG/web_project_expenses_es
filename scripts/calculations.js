@@ -12,32 +12,21 @@ let expenseEntries = [
     ["subscriptions", 12 ]
 ];
 
-
+ for(let expense of expenseEntries){
+        totalExpensesValue += expense[1];
+    }
 
 function calculateAverageExpense(){
     if(expenseEntries.length === 0){
         return 0;
-    } else {
-
-        totalExpensesValue = 0;
-
-    for(let expense of expenseEntries){
-        totalExpensesValue += expense[1];
-    }
-    }
+    } else 
          return totalExpensesValue / expenseEntries.length;
 }
     
 
 function calculateBalance(){
-    
     let balance = 0;
-    totalExpensesValue = 0;
-    for(let i = 0; i < expenseEntries.length; i++  ){
-    totalExpensesValue +=  expenseEntries[i][1];
-    }
     balance =  budgetValue - totalExpensesValue;
-
     return balance;
 }
 
@@ -98,4 +87,3 @@ function addExpenseEntry(newEntries){
     totalExpensesValue += newEntries[1];
 
 }
-
