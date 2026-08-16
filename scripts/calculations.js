@@ -7,7 +7,7 @@ let expenseEntries = [
     ["restaurants", 50 ],
     ["transport", 12 ],
     ["home", 70 ],
-    ["subscriptions", 12 ],
+    ["subscriptions", 14 ],
     ["groceries", 28 ],
     ["subscriptions", 12 ]
 ];
@@ -45,10 +45,10 @@ function calculateBalance(){
 let balanceColor ="green";
 
 function updateBalanceColor(){
-    if (budgetValue < 0 ){
+    if (calculateBalance() < 0 ){
         balanceColor = "red";
         }   
-        else if (budgetValue <= (totalExpensesValue * .25)) {
+        else if (calculateBalance() <= (totalExpensesValue * .25)) {
             balanceColor = "orange";
         } else {
             balanceColor ="green";
