@@ -24,8 +24,7 @@ function calculateAverageExpense(){
 }
     
 function calculateBalance(){
-    let balance = 0;
-    balance =  budgetValue - totalExpensesValue;
+    let balance = budgetValue - totalExpensesValue;
     return balance;
 }
 
