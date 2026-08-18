@@ -28,7 +28,6 @@ function calculateBalance(){
     return balance;
 }
 
-
 let balanceColor ="green";
 
 function updateBalanceColor(){
